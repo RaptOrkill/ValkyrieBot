@@ -1,0 +1,15 @@
+{
+  "name": "valkyrie-uhc-bot",
+  "version": "1.0.0",
+  "description": "Bot ValkyrieUHC - Discord.js v14",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "lowdb": "^2.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
