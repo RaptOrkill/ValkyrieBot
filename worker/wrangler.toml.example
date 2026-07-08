@@ -1,0 +1,22 @@
+# Copie ce fichier en "wrangler.toml" (ne sera pas commit — voir .gitignore)
+# puis remplace database_id après avoir créé la base D1.
+
+name = "valkyriebot"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "valkyriebot"
+database_id = "REMPLACE_APRES_wrangler_d1_create"
+
+[vars]
+CLIENT_ID = "REMPLACE_PAR_TON_CLIENT_ID"
+GUILD_ID = "REMPLACE_PAR_TON_GUILD_ID"
+ANNOUNCE_CHANNEL_ID = "REMPLACE_PAR_TON_ANNOUNCE_CHANNEL_ID"
+ADMIN_ROLE_ID = "REMPLACE_PAR_TON_ADMIN_ROLE_ID"
+SERVER_IP = "play.valkyrieuhc.fr"
+DISCORD_PUBLIC_KEY = "REMPLACE_PAR_TA_PUBLIC_KEY"
+
+# DISCORD_TOKEN n'est PAS ici — c'est un secret, à définir avec :
+#   npx wrangler secret put DISCORD_TOKEN
