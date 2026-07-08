@@ -10,6 +10,7 @@ const commands = [
   require('./commands/pseudo').data,
   require('./commands/host').data,
   require('./commands/draw').data,
+  require('./commands/rappel').data,
   closeCommand.data,
   whitelistCommand.data
 ].map(cmd => cmd.toJSON());

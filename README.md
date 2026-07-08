@@ -44,6 +44,7 @@ node src/index.js
 | `/pseudo [NomMC]` | Public | Lie ton pseudo Minecraft |
 | `/host` | Admin | Créer une partie (Modal) |
 | `/draw [id]` | Admin | Tirage au sort |
+| `/rappel [id] [message]` | Admin | Rappel en MP aux inscrits |
 | `/close [id]` | Admin | Fermer + nettoyage |
 | `/whitelist [id]` | Admin | Générer la whitelist MC |
 

@@ -24,9 +24,10 @@ client.commands = new Collection();
 const pseudo       = require('./commands/pseudo');
 const host         = require('./commands/host');
 const draw         = require('./commands/draw');
+const rappel       = require('./commands/rappel');
 const { closeCommand, whitelistCommand } = require('./commands/close');
 
-for (const cmd of [pseudo, host, draw, closeCommand, whitelistCommand]) {
+for (const cmd of [pseudo, host, draw, rappel, closeCommand, whitelistCommand]) {
   client.commands.set(cmd.data.name, cmd);
 }
 

@@ -183,6 +183,28 @@ function substituteDMEmbed(game, rank) {
 }
 
 // ============================================================
+//  Embed MP rappel
+// ============================================================
+function reminderDMEmbed(game, serverIp, customMessage) {
+  const embed = new EmbedBuilder()
+    .setColor(COLORS.purple)
+    .setTitle('🔔 Rappel — Partie UHC à venir !')
+    .setDescription(
+      `Tu es inscrit(e) pour **${game.title}** !\n\n` +
+      `**Ça commence <t:${game.time_ts}:R> (<t:${game.time_ts}:F>)**\n\n` +
+      `>>> 🌐 **IP du serveur :** \`${serverIp}\`\n` +
+      `🎮 **Mode :** \`${game.mode}\`\n\n` +
+      (customMessage ? `📝 ${customMessage}\n\n` : '') +
+      `Sois prêt(e) à l'heure ! ⚔️`
+    )
+    .setThumbnail('https://i.imgur.com/7RkFw1b.png')
+    .setFooter({ text: 'Valkyrie UHC  •  valkyrie-uhc.fr' })
+    .setTimestamp();
+
+  return embed;
+}
+
+// ============================================================
 //  Embed erreur (éphémère)
 // ============================================================
 function errorEmbed(message) {
@@ -204,6 +226,6 @@ module.exports = {
   COLORS,
   gameEmbed, gameButtons,
   drawEmbed, adminListEmbed,
-  selectedDMEmbed, substituteDMEmbed,
+  selectedDMEmbed, substituteDMEmbed, reminderDMEmbed,
   errorEmbed, successEmbed
 };
